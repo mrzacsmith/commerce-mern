@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 import ProductScreen from './Screens/ProductScreen'
 import HomeScreen from './Screens/HomeScreen'
 import './App.css'
@@ -19,7 +19,7 @@ const App = () => {
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
-            <a href="#">commerce mern</a>
+            <Link to="/">commerce mern</Link>
           </div>
           <div className="header-links">
             <a href="cart.html">cart</a>
@@ -42,7 +42,7 @@ const App = () => {
         </aside>
         <main className="main">
           <div className="content">
-            <Route path="products/:id" component={ProductScreen} />
+            <Route path="product/:id" component={ProductScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
           </div>
         </main>
