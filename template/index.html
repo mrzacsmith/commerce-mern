@@ -9,13 +9,25 @@
   <body>
     <div class="grid-container">
       <header class="header">
-        <div class="brand"><a href="#">commerce mern</a></div>
+        <div class="brand">
+          <button onClick="openMenu()">
+            &#9776;
+          </button>
+          <a href="#">commerce mern</a>
+        </div>
         <div class="header-links">
           <a href="cart.html">cart</a>
           <a href="signin.html">signin</a>
         </div>
       </header>
-
+      <aside class="sidebar">
+        <h3>shopping categories</h3>
+        <button class="sidebar-close-btn" onClick="closeMenu()">x</button>
+        <ul>
+          <li><a href="pants.html">pants</a></li>
+          <li><a href="shirts.html">shirts</a></li>
+        </ul>
+      </aside>
       <main class="main">
         <div class="content">
           <ul class="products">
@@ -128,5 +140,14 @@
         All rights reservered.
       </footer>
     </div>
+    <script>
+      const openMenu = () => {
+        document.querySelector('.sidebar').classList.add('open')
+      }
+
+      const closeMenu = () => {
+        document.querySelector('.sidebar').classList.remove('open')
+      }
+    </script>
   </body>
 </html>
