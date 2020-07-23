@@ -9,6 +9,7 @@ export default {
       brand: 'Nike',
       rating: 4.5,
       numReivews: 10,
+      status: 'In Stock',
     },
     {
       _id: '125',
@@ -19,6 +20,7 @@ export default {
       brand: 'Addias',
       rating: 4.1,
       numReivews: 8,
+      status: 'In Stock',
     },
     {
       _id: '129',
@@ -29,6 +31,7 @@ export default {
       brand: 'Nike',
       rating: 2.5,
       numReivews: 1,
+      status: 'Back Order',
     },
   ],
 }

@@ -8,7 +8,7 @@ const ProductScreen = (props) => {
   console.log(product.image)
   return (
     <div>
-      <div>
+      <div className="back-to-results">
         <Link to="/">back to results</Link>
       </div>
       <div className="details">
@@ -24,10 +24,34 @@ const ProductScreen = (props) => {
               {product.rating} stars ({product.numReivews} reviews)
             </li>
             <li>
-              <b>{product.price}</b>
+              Price: <b className="details-info-price">${product.price}</b>
+            </li>
+            {product.description ? (
+              <li>
+                description: <div>{product.description}</div>
+              </li>
+            ) : (
+              'empty'
+            )}
+
+            {/* remove 'empty' for description */}
+          </ul>
+        </div>
+        <div className="details-action">
+          <ul>
+            <li>Price: ${product.price}</li>
+            <li>Status: {product.status}</li>
+            <li>
+              Qty:
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
             </li>
             <li>
-              description: <div>{product.description}</div>
+              <button className="button primary">add to cart</button>
             </li>
           </ul>
         </div>
